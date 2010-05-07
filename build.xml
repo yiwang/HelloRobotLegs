@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="HelloRobotLegs" basedir="." default="swf">
+
+  <property name="FLEX_HOME" location="/base/sdks/flex_sdk_4.0.0.14159"/>
+  
+  <target name="clean" description="Clean output directories">
+      <!-- Delete the ${build} directory trees -->
+    <delete dir="bin"/>
+    <mkdir dir="bin"/>
+  </target>
+
+  <target name="swf" depends="clean">
+    <echo>[test] Running swf generation</echo>
+    <java jar="${FLEX_HOME}/lib/mxmlc.jar" dir="${FLEX_HOME}/frameworks" fork="true" failonerror="true">
+      <arg value="${basedir}/src/Main.as"/>
+      <arg value="-source-path=${basedir}/src"/>
+      <arg value="-output=${basedir}/bin/HelloRobotLegs.swf"/>
+      <arg value="-default-background-color=0x000000"/>
+      <arg value="-library-path+=${basedir}/libs"/>
+<!-- So true. -->
+      <arg value="-incremental=true"/>
+      <arg value="-verbose-stacktraces=true"/>
+      <arg value="-headless-server=true"/>
+    </java>
+    <echo>[test] Finished swf generation</echo>
+  </target>
+  
+</project>
