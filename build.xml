@@ -15,7 +15,7 @@
       <arg value="${basedir}/src/Main.as"/>
       <arg value="-source-path=${basedir}/src"/>
       <arg value="-output=${basedir}/bin/HelloRobotLegs.swf"/>
-      <arg value="-default-background-color=0x000000"/>
+      <arg value="-default-background-color=0xFFFFFF"/>
       <arg value="-library-path+=${basedir}/libs"/>
 <!-- So true. -->
       <arg value="-incremental=true"/>
