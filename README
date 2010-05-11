@@ -1,4 +1,4 @@
 following the great RobotLegs Hello World Video Tutorial:
 http://pv3d.org/2009/11/18/robotlegs-hello-world-video-tutorial
 
-made a build.xml for ant to compile with Flex SDK
+made a build.xml for ant to compile .as files directly into .swf with open sourced Flex SDK, without Flash (Flex) Builder or Flash IDE.
